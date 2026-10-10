@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تكنولوجيا المعلومات والاتصالات — الصف الثالث الإعدادي</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF3F8;--ink:#12305A;--tx:#1d2733;--card:#fff;--line:#c9d6e6;--hl:#FFD84D;--ok:#1E8E5A;--no:#C23B3B;--mut:#5a6b80}
+@media(prefers-color-scheme:dark){:root:not([data-t=l]){--bg:#0f1a2b;--ink:#9cc3ff;--tx:#e6edf6;--card:#16243a;--line:#2b3d57;--mut:#9fb0c6}}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.9 "IBM Plex Sans Arabic",Tahoma,sans-serif;color:var(--tx);background:var(--bg);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px;background-attachment:fixed}
+header{background:var(--ink);color:#fff;padding:18px 20px}
+@media(prefers-color-scheme:dark){header{color:#0f1a2b}}
+header h1{margin:0;font-size:1.3rem}header p{margin:0;opacity:.85;font-size:.9rem}
+.wrap{display:grid;grid-template-columns:290px 1fr;gap:20px;max-width:1100px;margin:20px auto;padding:0 14px}
+@media(max-width:800px){.wrap{grid-template-columns:1fr}}
+nav,main{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px}
+nav h3{margin:14px 0 6px;font-size:.95rem;color:var(--ink)}nav h3:first-child{margin-top:0}
+nav button{display:flex;justify-content:space-between;width:100%;text-align:right;font:inherit;font-size:.92rem;line-height:1.5;padding:8px 10px;margin:2px 0;border:0;background:none;color:inherit;border-radius:4px;cursor:pointer}
+nav button:hover{background:var(--bg)}nav button.on{background:var(--hl);color:#12305A;font-weight:700}
+nav small{color:var(--mut);white-space:nowrap}nav button.on small{color:#12305A}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+h2{margin:0 0 10px;color:var(--ink)}h4{margin:18px 0 4px;color:var(--ink)}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:right}th{background:var(--bg)}
+pre{direction:ltr;text-align:left;background:#12305A;color:#eaf2ff;padding:12px;border-radius:4px;overflow-x:auto;font:14px/1.6 monospace}
+code{direction:ltr;unicode-bidi:embed;background:var(--bg);padding:0 5px;border-radius:3px}
+.sep{border-top:3px double var(--ink);margin:28px 0 16px;padding-top:10px}
+.q{border-bottom:1px dashed var(--line);padding:10px 0}.q p{margin:0 0 4px}
+.q label{display:block;padding:2px 6px;cursor:pointer}
+.q.ok{background:rgba(30,142,90,.1)}.q.no{background:rgba(194,59,59,.1)}
+.ans{font:inherit;width:min(100%,320px);padding:6px 10px;border:1px solid var(--ink);border-radius:4px;background:var(--card);color:inherit}
+.fb{font-size:.9rem;font-weight:600;min-height:1px}.ok .fb{color:var(--ok)}.no .fb{color:var(--no)}
+.btn{font:inherit;font-weight:700;background:var(--hl);color:#12305A;border:2px solid #12305A;border-radius:4px;padding:8px 22px;margin:14px 0;cursor:pointer}
+.score{font-size:1.3rem;font-weight:700;color:var(--ink)}
+.note{background:rgba(255,216,77,.25);border-right:4px solid var(--hl);padding:8px 12px;margin:12px 0;border-radius:3px}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:10px 0 30px}
+</style>
+</head>
+<body>
+<header><h1>تكنولوجيا المعلومات والاتصالات (ICT)</h1><p>الصف الثالث الإعدادي — الفصل الدراسي الأول 2026 / 2027</p></header>
+<div class="wrap"><nav id="nav" aria-label="الوحدات والدروس"></nav><main id="main"></main></div>
+<footer>المحتوى من مذكرة إعداد: محمد عمرو</footer>
+<script>
+const U=[
+{t:"الوحدة الأولى: الذكاء الاصطناعي ولغات البرمجة",L:[
+["التفكير الحاسوبي وحل المشكلات",`<h4>ما هو التفكير الحاسوبي؟</h4>
+<p>التفكير الحاسوبي (Computational Thinking) أسلوب تفكير منظم نحل به المشكلات بطريقة تشبه طريقة عمل الحاسوب. ويمكن تطبيقه في الحياة اليومية، وليس في البرمجة فقط.</p>
+<div class="note"><b>معلومة مهمة:</b> التفكير الحاسوبي لا يعني أن تفكر مثل الحاسوب، بل أن تفكر بطريقة منظمة ومنطقية لحل المشكلات.</div>
+<h4>الخطوات الأربع</h4>
+<table><tr><th>الخطوة</th><th>الاسم بالإنجليزية</th><th>الشرح</th></tr>
+<tr><td>1. التحليل</td><td>Decomposition</td><td>تقسيم المشكلة الكبيرة إلى مشكلات صغيرة</td></tr>
+<tr><td>2. التعرف على الأنماط</td><td>Pattern Recognition</td><td>البحث عن التشابهات والأنماط المتكررة</td></tr>
+<tr><td>3. التجريد</td><td>Abstraction</td><td>تجاهل التفاصيل غير المهمة</td></tr>
+<tr><td>4. تصميم الخوارزمية</td><td>Algorithm</td><td>وضع خطوات مرتبة لحل المشكلة</td></tr></table>
+<h4>مثال: تنظيم حفل المدرسة</h4>
+<ol><li><b>التحليل:</b> نقسم الحفل إلى الدعوات، والمكان، والضيافة، والبرنامج.</li>
+<li><b>التعرف على الأنماط:</b> في كل عام تتكرر نفس الخطوات تقريباً.</li>
+<li><b>التجريد:</b> نتجاهل التفاصيل الصغيرة ونركز على الميزانية.</li>
+<li><b>الخوارزمية:</b> تحديد الميزانية، ثم حجز القاعة، ثم إرسال الدعوات، ثم التنفيذ.</li></ol>
+<div class="note"><b>تذكّر:</b> التحليل ثم الأنماط ثم التجريد ثم الخوارزمية. ويمكن تطبيقها على أي مشكلة، مثل تنظيم رحلة أو ترتيب المذاكرة.</div>`],
+["خوارزميات الذكاء الاصطناعي",`<h4>ما هو الذكاء الاصطناعي؟</h4>
+<p>الذكاء الاصطناعي (AI) فرع من علوم الحاسوب يهدف إلى تصميم أنظمة قادرة على محاكاة الذكاء البشري، مثل التعلم والاستنتاج وحل المشكلات.</p>
+<h4>أنواع الخوارزميات</h4>
+<table><tr><th>النوع</th><th>الوصف</th><th>أمثلة</th></tr>
+<tr><td>خوارزميات تقليدية</td><td>تعتمد على قواعد ثابتة</td><td>الترتيب، البحث، الآلة الحاسبة</td></tr>
+<tr><td>خوارزميات الذكاء الاصطناعي</td><td>تتعلم من البيانات وتتحسن</td><td>التعلم الآلي، التعلم العميق</td></tr></table>
+<h4>أنواع خوارزميات الذكاء الاصطناعي</h4>
+<ol><li><b>التعلم الآلي (Machine Learning):</b> النظام يتعلم من البيانات دون برمجة صريحة. مثال: تطبيق يتعرف على الصور.</li>
+<li><b>التعلم العميق (Deep Learning):</b> نوع متقدم من التعلم الآلي يستخدم الشبكات العصبية. مثال: فتح الهاتف بالتعرف على الوجه.</li>
+<li><b>معالجة اللغة الطبيعية (NLP):</b> فهم لغة البشر. مثال: المساعدات الصوتية Siri و Alexa.</li></ol>
+<h4>مقارنة: البرمجة التقليدية والذكاء الاصطناعي</h4>
+<table><tr><th>المعيار</th><th>البرمجة التقليدية</th><th>الذكاء الاصطناعي</th></tr>
+<tr><td>المصدر</td><td>قواعد يكتبها المبرمج</td><td>بيانات يتعلم منها النموذج</td></tr>
+<tr><td>النتيجة</td><td>ثابتة دائماً</td><td>تتغير وتتحسن</td></tr>
+<tr><td>المثال</td><td>الآلة الحاسبة</td><td>التنبؤ بالطقس</td></tr>
+<tr><td>المرونة</td><td>محدودة</td><td>عالية</td></tr></table>
+<div class="note"><b>تذكّر:</b> التقليدية تنفذ قواعد وضعها المبرمج، أما الذكاء الاصطناعي فيحتاج بيانات يتعلم منها.</div>`],
+["السلاسل النصية Strings والقوائم Lists",`<h4>أولاً: السلسلة النصية (String)</h4>
+<p>مجموعة من الحروف والأرقام والرموز محصورة بين علامتي تنصيص مفردة أو مزدوجة. ولا يمكن تعديلها بعد إنشائها.</p>
+<pre>name = "Ahmed"
+message = 'Welcome to Python'</pre>
+<table><tr><th>العملية</th><th>الكود</th><th>النتيجة</th></tr>
+<tr><td>الطول</td><td><code>len("Hello")</code></td><td>5</td></tr>
+<tr><td>التكرار</td><td><code>"Hi" * 3</code></td><td>"HiHiHi"</td></tr>
+<tr><td>الدمج</td><td><code>"Hello" + " " + "World"</code></td><td>"Hello World"</td></tr>
+<tr><td>الحرف الأول</td><td><code>"Python"[0]</code></td><td>"P"</td></tr>
+<tr><td>آخر حرف</td><td><code>"Python"[-1]</code></td><td>"n"</td></tr></table>
+<div class="note">الترقيم يبدأ من الصفر، فالحرف الأول رقمه 0. والرقم السالب -1 يعني آخر حرف.</div>
+<h4>ثانياً: القائمة (List)</h4>
+<p>مجموعة من العناصر مرتبة وقابلة للتعديل، وتُكتب بين قوسين مربعين.</p>
+<pre>fruits = ["apple", "banana", "orange"]
+numbers = [10, 20, 30, 40]
+mixed = ["Ahmed", 15, 3.14, True]</pre>
+<table><tr><th>العملية</th><th>الكود</th><th>النتيجة</th></tr>
+<tr><td>الوصول</td><td><code>fruits[0]</code></td><td>"apple"</td></tr>
+<tr><td>الإضافة</td><td><code>fruits.append("mango")</code></td><td>تُضاف في النهاية</td></tr>
+<tr><td>الحذف</td><td><code>fruits.remove("banana")</code></td><td>تُحذف الموزة</td></tr>
+<tr><td>الطول</td><td><code>len(fruits)</code></td><td>عدد العناصر</td></tr>
+<tr><td>الترتيب</td><td><code>numbers.sort()</code></td><td>ترتيب تصاعدي</td></tr></table>
+<h4>الفرق بين السلسلة والقائمة</h4>
+<table><tr><th></th><th>السلسلة</th><th>القائمة</th></tr>
+<tr><td>تُكتب بين</td><td>علامتي تنصيص</td><td>قوسين مربعين [ ]</td></tr>
+<tr><td>التعديل بعد الإنشاء</td><td>غير ممكن</td><td>ممكن</td></tr>
+<tr><td>محتواها</td><td>حروف ورموز</td><td>عناصر من أنواع مختلفة</td></tr></table>`],
+["الدوال ذات المعاملات في Python",`<h4>ما هي الدالة؟</h4>
+<p>الدالة (Function) مجموعة من الأوامر البرمجية تُجمع تحت اسم واحد، ويمكن استدعاؤها عند الحاجة. فائدتها: تنظيم الكود، وتقليل التكرار، وسهولة الصيانة.</p>
+<h4>تعريف دالة بسيطة</h4>
+<pre>def greet():
+    print("Hello, World!")
+
+greet()   # Hello, World!</pre>
+<div class="note">تعريف الدالة بـ def لا ينفذها. لن تعمل إلا عند استدعائها باسمها.</div>
+<h4>الدوال ذات المعاملات (Parameters)</h4>
+<p>المعامل قيمة نمررها للدالة لتستخدمها، فتعمل مع قيم مختلفة.</p>
+<pre>def greet(name):
+    print("Hello, " + name)
+
+greet("Ahmed")   # Hello, Ahmed
+greet("Sara")    # Hello, Sara</pre>
+<h4>دالة بأكثر من معامل</h4>
+<pre>def add(x, y):
+    return x + y
+
+result = add(5, 3)
+print(result)    # 8</pre>
+<h4>دالة تُرجع قيمة</h4>
+<pre>def square(n):
+    return n * n
+
+print(square(4))   # 16</pre>
+<h4>الفرق بين print و return</h4>
+<table><tr><th>print</th><th>return</th></tr>
+<tr><td>تطبع النتيجة على الشاشة</td><td>تُرجع القيمة للبرنامج</td></tr>
+<tr><td>لا يمكن تخزينها في متغير</td><td>يمكن تخزينها في متغير</td></tr>
+<tr><td>الدالة لا تُرجع شيئاً</td><td>الدالة تُرجع القيمة وتنتهي</td></tr></table>`],
+["معالجة أخطاء مدخلات المستخدم",`<h4>لماذا نعالج الأخطاء؟</h4>
+<p>لأن المستخدم قد يدخل قيمة غير متوقعة، مثل: حروف بدل أرقام، أو القسمة على صفر، أو قيمة خارج النطاق. وبدون معالجة ينهار البرنامج.</p>
+<h4>استخدام try / except</h4>
+<pre>try:
+    age = int(input("Enter your age: "))
+    print("Your age is:", age)
+except ValueError:
+    print("Error: Please enter a valid number!")</pre>
+<table><tr><th>الجزء</th><th>الوظيفة</th></tr>
+<tr><td>try</td><td>تنفيذ الكود الذي قد يسبب خطأ</td></tr>
+<tr><td>except</td><td>التعامل مع الخطأ في حالة حدوثه</td></tr>
+<tr><td>ValueError</td><td>نوع الخطأ عند إدخال قيمة غير صحيحة</td></tr>
+<tr><td>ZeroDivisionError</td><td>نوع الخطأ عند القسمة على صفر</td></tr></table>
+<h4>مثال 1: القسمة على صفر</h4>
+<pre>try:
+    x = int(input("Enter number: "))
+    print(10 / x)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except ValueError:
+    print("Please enter a number!")</pre>
+<p>يمكن استخدام أكثر من except لأنواع مختلفة من الأخطاء. فإذا أدخل المستخدم 0 تظهر رسالة القسمة على صفر، وإذا أدخل حروفاً تظهر رسالة طلب رقم.</p>
+<h4>مثال 2: else و finally</h4>
+<pre>try:
+    x = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input!")
+else:
+    print("Success:", x)
+finally:
+    print("Program finished.")</pre>
+<p><b>else</b> تُنفذ إذا لم يحدث خطأ. <b>finally</b> تُنفذ دائماً سواء حدث خطأ أم لا.</p>
+<div class="note"><b>تذكّر:</b> try / except تمنع انهيار البرنامج.</div>`]]},
+{t:"الوحدة الثانية: الذكاء الاصطناعي والأمن السيبراني",L:[
+["التنبؤ باستخدام نموذج الذكاء الاصطناعي",`<h4>ما هو التنبؤ؟</h4>
+<p>التنبؤ (Prediction) هو توقع نتيجة جديدة بناءً على أنماط تعلمها النموذج من بيانات سابقة.</p>
+<h4>الفرق بين البرمجة التقليدية ونموذج الذكاء الاصطناعي</h4>
+<table><tr><th>المعيار</th><th>البرمجة التقليدية</th><th>نموذج الذكاء الاصطناعي</th></tr>
+<tr><td>المدخل</td><td>بيانات + قواعد</td><td>بيانات + نتائج</td></tr>
+<tr><td>العملية</td><td>تنفيذ القواعد</td><td>تعلّم العلاقة</td></tr>
+<tr><td>الناتج</td><td>نفس النتيجة دائماً</td><td>توقع مرن</td></tr></table>
+<h4>النموذج الخطي (Linear Model)</h4>
+<pre>y = w × x + b</pre>
+<table><tr><th>الرمز</th><th>المعنى</th></tr>
+<tr><td>x</td><td>المدخلات (Input)</td></tr>
+<tr><td>w</td><td>الوزن (Weight): قوة التأثير</td></tr>
+<tr><td>b</td><td>الانحياز (Bias): قيمة ثابتة</td></tr>
+<tr><td>y</td><td>الناتج المتوقع (Output)</td></tr></table>
+<h4>مثال: التنبؤ بدرجة الطالب</h4>
+<p>كل ساعة دراسة تعطي 5 درجات، والبداية 10 درجات، فتكون المعادلة <code>y = 5x + 10</code>.</p>
+<table><tr><th>ساعات الدراسة (x)</th><th>الدرجة المتوقعة (y)</th></tr>
+<tr><td>0</td><td>10</td></tr><tr><td>2</td><td>20</td></tr><tr><td>5</td><td>35</td></tr><tr><td>10</td><td>60</td></tr></table>
+<div class="note"><b>ملاحظة:</b> النموذج يتعلم قيمتي w و b من البيانات، وليس من قواعد ثابتة.</div>
+<h4>خطوات بناء نموذج ذكاء اصطناعي بسيط</h4>
+<ol><li>جمع البيانات (ساعات الدراسة + الدرجات الفعلية).</li><li>تدريب النموذج (تعلّم w و b).</li><li>اختبار النموذج على بيانات جديدة.</li><li>التنبؤ بدرجات طلاب جدد.</li></ol>`],
+["الذكاء الاصطناعي وحقوق الملكية الفكرية",`<h4>ما هي الملكية الفكرية؟</h4>
+<p>الملكية الفكرية (IP) حقوق قانونية تحمي إبداعات العقل البشري، مثل الكتب والأغاني والصور والأكواد البرمجية.</p>
+<h4>تحديات الذكاء الاصطناعي لحقوق الملكية</h4>
+<table><tr><th>التحدي</th><th>الشرح</th></tr>
+<tr><td>بيانات التدريب</td><td>هل يحق للذكاء الاصطناعي التعلم من أعمال محمية؟</td></tr>
+<tr><td>المحتوى المولَّد</td><td>من يملك ما ينتجه الذكاء الاصطناعي: المستخدم أم الشركة؟</td></tr>
+<tr><td>التقليد</td><td>قد ينتج محتوى شبيهاً بأعمال محمية</td></tr>
+<tr><td>الاستخدام التجاري</td><td>هل يجوز بيع ما ينتجه الذكاء الاصطناعي؟</td></tr></table>
+<h4>مسؤوليات المستخدم</h4>
+<ul><li>احترام حقوق الآخرين.</li><li>الإشارة إلى المصادر عند استخدام الذكاء الاصطناعي.</li><li>عدم استخدامه لتقليد أعمال محمية.</li><li>الالتزام بقوانين بلدك.</li></ul>`],
+["الوعي السيبراني والألعاب الإلكترونية الخطرة",`<h4>ما هو الوعي السيبراني؟</h4>
+<p>معرفة المخاطر الإلكترونية وكيفية الحماية منها.</p>
+<h4>أنواع المخاطر السيبرانية</h4>
+<table><tr><th>النوع</th><th>الوصف</th></tr>
+<tr><td>التصيد الاحتيالي</td><td>رسائل مزيفة لسرقة البيانات</td></tr>
+<tr><td>البرمجيات الخبيثة</td><td>فيروسات وبرامج ضارة</td></tr>
+<tr><td>الاختراق</td><td>الوصول غير المصرح به للحسابات</td></tr>
+<tr><td>الابتزاز الإلكتروني</td><td>تهديد بنشر معلومات خاصة</td></tr></table>
+<h4>أنواع الألعاب الإلكترونية الخطرة</h4>
+<ol><li>ألعاب العنف المفرط: تشجع على السلوك العدواني.</li><li>ألعاب التحديات القاتلة: تسبب إيذاء النفس.</li><li>الألعاب المدفوعة: تستهلك أموالاً كثيرة.</li><li>الألعاب الإدمانية: تستهلك الوقت.</li><li>الألعاب الجماعية المفتوحة: تواصل مع غرباء.</li></ol>
+<h4>علامات إدمان الألعاب</h4>
+<ul><li>اللعب لساعات طويلة يومياً.</li><li>تراجع الأداء الدراسي.</li><li>العصبية عند منع اللعب.</li><li>الانسحاب الاجتماعي.</li><li>اضطراب النوم.</li></ul>
+<h4>كيفية الحماية</h4>
+<table><tr><th>الخطوة</th><th>الشرح</th></tr>
+<tr><td>تحديد وقت</td><td>وقت محدد للعب يومياً</td></tr>
+<tr><td>رقابة أبوية</td><td>استخدام أدوات الرقابة</td></tr>
+<tr><td>اختيار الألعاب</td><td>مراجعة التصنيف العمري</td></tr>
+<tr><td>التوعية</td><td>التحدث مع الأسرة عن المخاطر</td></tr>
+<tr><td>بدائل</td><td>ممارسة الرياضة والهوايات</td></tr></table>`],
+["الذكاء الاصطناعي والتزييف العميق Deepfake",`<h4>ما هو التزييف العميق؟</h4>
+<p>تقنية تستخدم الذكاء الاصطناعي لإنشاء مقاطع فيديو أو صور أو أصوات مزيفة تبدو حقيقية تماماً.</p>
+<h4>كيف يعمل؟</h4>
+<ol><li><b>جمع البيانات:</b> صور وفيديوهات للشخص.</li><li><b>التدريب:</b> تدريب نموذج على ملامحه وصوته.</li><li><b>التوليد:</b> إنشاء محتوى جديد يقلّده.</li><li><b>الدمج:</b> وضع الوجه أو الصوت على فيديو آخر.</li></ol>
+<h4>مخاطر التزييف العميق</h4>
+<table><tr><th>الخطر</th><th>الشرح</th></tr>
+<tr><td>تشويه السمعة</td><td>نشر فيديوهات مزيفة لشخصيات</td></tr>
+<tr><td>الخداع السياسي</td><td>تصريحات مزيفة للقادة السياسيين</td></tr>
+<tr><td>الاحتيال</td><td>انتحال شخصية لسرقة المال</td></tr>
+<tr><td>فقدان الثقة</td><td>زعزعة الثقة في أي فيديو</td></tr>
+<tr><td>التهديد والابتزاز</td><td>نشر محتوى مزيف</td></tr></table>
+<h4>كيف تكشف الفيديو المزيف؟</h4>
+<ul><li>عدم تناسق الإضاءة.</li><li>حركات غير طبيعية للعين أو الفم.</li><li>الصوت لا يتوافق مع حركة الشفاه.</li><li>البحث عن المصدر الأصلي.</li><li>استخدام أدوات كشف متخصصة.</li></ul>
+<h4>كيف تحمي نفسك؟</h4>
+<ul><li>لا تصدق كل ما تراه على الإنترنت.</li><li>تحقق من المصادر الموثوقة.</li><li>لا تشارك محتوى مشكوكاً فيه.</li><li>أبلغ عن المحتوى المزيف.</li></ul>`]]}
+];
+// m: اختيار من متعدد | t: صح/خطأ | f: أكمل
+const Q=[];
+[["0_0","التفكير الحاسوبي يشمل:",["خطوتين","ثلاث خطوات","أربع خطوات","خمس خطوات"],2],
+["0_0","تقسيم المشكلة الكبيرة إلى مشكلات صغيرة يسمى:",["التجريد","التحليل","الأنماط","الخوارزمية"],1],
+["0_0","خطوة التجريد تعني:",["تقسيم المشكلة","البحث عن أنماط","تجاهل التفاصيل غير المهمة","كتابة الكود"],2],
+["0_1","أي مما يلي خوارزمية ذكاء اصطناعي:",["الآلة الحاسبة","البحث الخطي","التعلم العميق","الترتيب"],2],
+["0_1","أي مما يلي نوع من أنواع الذكاء الاصطناعي:",["HTML","NLP","CSS","HTTP"],1],
+["0_2","القائمة في Python تكتب بين:",["()","[ ]","{ }","< >"],1],
+["0_2","لمعرفة طول قائمة نستخدم:",["size()","count()","len()","length()"],2],
+["0_2","للوصول لأول عنصر في القائمة fruits:",["fruits(0)","fruits[0]","fruits{0}","fruits.0"],1],
+["0_3","مخرجات دالة return:",["تُطبع فقط","تُخزَّن في متغير","لا تُستخدم","تُحذف"],1],
+["0_3","تعريف دالة في Python يبدأ بـ:",["function","def","void","func"],1],
+["0_3","print و return:",["نفس الشيء","مختلفان","متساويان","لا علاقة بينهما"],1],
+["0_4","للتعامل مع الأخطاء نستخدم:",["if/else","for/while","try/except","def/return"],2],
+["0_4","لمعالجة القسمة على صفر نستخدم:",["ValueError","ZeroDivisionError","TypeError","NameError"],1],
+["1_0","نموذج التنبؤ الخطي يعبر عنه بـ:",["y = x + w","y = w × x + b","y = b × x","y = w + b"],1],
+["1_0","في المعادلة y = 5x + 10، عندما x = 4 فإن y =",["20","25","30","35"],2],
+["1_1","الملكية الفكرية تحمي:",["البرمجيات الخبيثة","إبداعات العقل","الفيروسات","التصيد"],1],
+["1_1","حقوق الملكية الفكرية تحمي:",["البرمجيات الخبيثة","الكتب والأغاني والصور","الفيروسات","التصيد"],1],
+["1_2","أي مما يلي خطر سيبراني:",["التصيد الاحتيالي","الدراسة","القراءة","الرياضة"],0],
+["1_2","من علامات إدمان الألعاب:",["تحسن الدراسة","تراجع الأداء الدراسي","زيادة النشاط","النوم الجيد"],1],
+["1_3","Deepfake تعني:",["الذكاء الاصطناعي","التزييف العميق","التعلم الآلي","الشبكات العصبية"],1]
+].forEach(r=>Q.push({l:r[0],t:'m',q:r[1],o:r[2],a:r[3]}));
+[["0_0","التفكير الحاسوبي يستخدم في البرمجة فقط.",0],["0_1","التعلم الآلي يتعلم من البيانات.",1],
+["0_2","السلسلة النصية يمكن تعديلها بعد إنشائها.",0],["0_2","القوائم قابلة للتعديل.",1],
+["0_4","try/except يمنع انهيار البرنامج.",1],["1_3","Deepfake تقنية آمنة تماماً.",0],
+["0_3","print و return نفس الشيء.",0],["1_0","النموذج الخطي يستخدم w و b.",1],
+["1_2","الألعاب الإلكترونية لا تسبب الإدمان.",0],["1_2","الوعي السيبراني يحمي من المخاطر الإلكترونية.",1],
+["0_1","معالجة اللغة الطبيعية (NLP) من أنواع الذكاء الاصطناعي.",1],["0_2","len() ترجع عدد عناصر القائمة.",1],
+["0_3","الدالة المعرفة بـ def لا تحتاج إلى استدعاء.",0],["1_0","w في النموذج الخطي تعني الوزن.",1],
+["1_3","التزييف العميق يمكن كشفه بسهولة دائماً.",0],["0_1","البرمجة التقليدية تعطي نفس الناتج دائماً.",1],
+["0_2","append() تحذف عنصراً من القائمة.",0],["0_4","try/except يمكن استخدامها مع أنواع مختلفة من الأخطاء.",1],
+["0_1","الذكاء الاصطناعي لا يحتاج بيانات للتعلم.",0],["1_1","الملكية الفكرية تحمي إبداعات العقل البشري.",1]
+].forEach(r=>Q.push({l:r[0],t:'t',q:r[1],a:!!r[2]}));
+[["0_0","خطوات التفكير الحاسوبي: التحليل، الأنماط، ......، الخوارزمية.","التجريد"],
+["1_0","النموذج الخطي: y = w × x + ......","b"],
+["0_2","لطباعة نص في Python نستخدم الدالة ......","print"],
+["0_4","للتعامل مع الأخطاء نستخدم ...... / ......","try/except|tryexcept"],
+["1_3","تقنية التزييف العميق تسمى بالإنجليزية ......","Deepfake"],
+["0_1","التعلم ...... نوع متقدم من التعلم الآلي يستخدم الشبكات العصبية.","العميق"],
+["0_3","تعرَّف الدالة في Python بكلمة ......","def"],
+["0_2","تكتب السلسلة النصية بين علامتي ......","علامتي تنصيص|تنصيص"],
+["0_2","تكتب القائمة في Python بين قوسين ......","مربعين|مربع|[]"],
+["0_2","لمعرفة طول قائمة نستخدم الدالة ......","len"],
+["1_0","w في المعادلة y = w×x + b ترمز إلى ......","الوزن"],
+["1_0","b في المعادلة y = w×x + b ترمز إلى ......","الانحياز"],
+["1_1","...... هي حقوق قانونية تحمي إبداعات العقل.","الملكية الفكرية"],
+["1_2","...... هو معرفة المخاطر الإلكترونية والحماية منها.","الوعي السيبراني"],
+["1_3","Deepfake = ...... ......","التزييف العميق"],
+["0_2","لترتيب قائمة تصاعدياً نستخدم الدالة ......","sort"],
+["0_2","لإضافة عنصر لقائمة نستخدم الدالة ......","append"],
+["0_3","لإرجاع قيمة من دالة نستخدم الكلمة المفتاحية ......","return"],
+["0_4","القسمة على صفر في Python تسبب خطأ اسمه ......","ZeroDivisionError"],
+["0_4","إدخال قيمة غير صحيحة في int() يسبب خطأ اسمه ......","ValueError"]
+].forEach(r=>Q.push({l:r[0],t:'f',q:r[1],a:r[2]}));
+
+const $=s=>document.querySelector(s);
+const nz=s=>String(s).trim().toLowerCase().replace(/[()\s"'،,]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');
+const best=()=>{try{return JSON.parse(localStorage.getItem('ict3')||'{}')}catch(e){return{}}};
+const save=(k,v)=>{try{const b=best();if(!(k in b)||v>b[k]){b[k]=v;localStorage.setItem('ict3',JSON.stringify(b))}}catch(e){}};
+const cnt=k=>Q.filter(x=>x.l===k).length;
+
+function nav(cur){
+  const b=best();let h='<button data-k="home"'+(cur=='home'?' class=on':'')+'>الصفحة الرئيسية</button>';
+  U.forEach((u,i)=>{h+=`<h3>${u.t}</h3>`;u.L.forEach((l,j)=>{const k=i+'_'+j;h+=`<button data-k="${k}"${cur==k?' class=on':''}><span>${l[0]}</span><small>${k in b?b[k]+'/':''}${cnt(k)}</small></button>`})});
+  h+=`<h3>اختبار</h3><button data-k="exam"${cur=='exam'?' class=on':''}><span>الامتحان الشامل</span><small>${'exam' in b?b.exam+'/':''}${Q.length}</small></button>`;
+  $('#nav').innerHTML=h;
+  $('#nav').querySelectorAll('button').forEach(x=>x.onclick=()=>{location.hash=x.dataset.k});
+}
+function quiz(qs,el,key){
+  let h='';
+  qs.forEach((x,i)=>{
+    h+=`<div class=q id="${key}q${i}"><p><b>${i+1}.</b> ${x.q}</p>`;
+    if(x.t=='m')x.o.forEach((o,j)=>h+=`<label><input type=radio name="${key}${i}" value=${j}> <span dir=auto>${o}</span></label>`);
+    else if(x.t=='t')h+=`<label><input type=radio name="${key}${i}" value=1> صح</label><label><input type=radio name="${key}${i}" value=0> خطأ</label>`;
+    else h+=`<input type=text class=ans dir=auto autocomplete=off aria-label="الإجابة">`;
+    h+='<div class=fb></div></div>';
+  });
+  h+='<button class=btn>صحّح الإجابات</button><div class=score role=status></div>';
+  el.innerHTML=h;
+  el.querySelector('.btn').onclick=()=>{
+    let s=0;
+    qs.forEach((x,i)=>{
+      const b=el.querySelector('[id="'+key+'q'+i+'"]');let ok=false,show;
+      if(x.t=='f'){ok=x.a.split('|').some(a=>nz(a)===nz(b.querySelector('input').value));show=x.a.split('|')[0]}
+      else{const c=b.querySelector('input:checked');
+        if(x.t=='m'){ok=!!c&&+c.value===x.a;show=x.o[x.a]}else{ok=!!c&&(c.value=='1')===x.a;show=x.a?'صح':'خطأ'}}
+      if(ok)s++;
+      b.className='q '+(ok?'ok':'no');
+      b.querySelector('.fb').textContent=ok?'إجابة صحيحة':'الإجابة الصحيحة: '+show;
+    });
+    const p=Math.round(s/qs.length*100);
+    el.querySelector('.score').textContent=`الدرجة: ${s} من ${qs.length} (${p}%) — ${p>=85?'ممتاز':p>=65?'جيد':'راجع الدرس وحاول مرة أخرى'}`;
+    save(key,s);nav(key);
+  };
+}
+function show(){
+  const k=location.hash.slice(1)||'home',m=$('#main');
+  if(k=='home'){
+    m.innerHTML=`<h2>مرحباً بك</h2><p>اختر درساً من القائمة لتقرأ الشرح، ثم أجب عن أسئلته واحصل على درجتك فوراً. يوجد ${Q.length} سؤالاً موزعة على ${U.reduce((a,u)=>a+u.L.length,0)} دروس في وحدتين، وأعلى درجة تحصل عليها في كل درس تُحفظ على جهازك.</p><p>ثم جرّب <b>الامتحان الشامل</b> لتختبر نفسك في المنهج كله.</p>`;
+  }else if(k=='exam'){
+    m.innerHTML=`<h2>الامتحان الشامل</h2><p>${Q.length} سؤالاً من الوحدتين: اختيار من متعدد، وصح أم خطأ، وأكمل. لكل سؤال درجة واحدة.</p><div id=qz></div>`;
+    quiz(Q,$('#qz'),'exam');
+  }else{
+    const [i,j]=k.split('_').map(Number);const l=U[i]&&U[i].L[j];
+    if(!l){location.hash='home';return}
+    const qs=Q.filter(x=>x.l===k);
+    m.innerHTML=`<h2>${l[0]}</h2><div>${l[1]}</div><div class=sep><h2>اختبر نفسك (${qs.length} أسئلة)</h2></div><div id=qz></div>`;
+    quiz(qs,$('#qz'),k);
+  }
+  nav(k);scrollTo(0,0);
+}
+addEventListener('hashchange',show);show();
+</script>
+</body>
+</html>
